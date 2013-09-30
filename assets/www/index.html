@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="jquery.mobile-1.3.2.min.css" />
 <script src="jquery-1.9.1.min.js"></script>
 <script src="jquery.mobile-1.3.2.min.js"></script>
+<script src="function.js"></script>
 <title>Dokument bez názvu</title>
 <style>
 #fefco_img{
@@ -15,6 +16,9 @@
 }
 .type_0200{
 	background: url("img/0200.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#dimensions label{
+	text-align:right;
 }
 </style>
 </head>
@@ -29,6 +33,45 @@
 	<div data-role="content">
     	<p></p>
         <div id='fefco_img' class='type_0200'></div>
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" data-role="button">3 VL B</a>
+            <a href="#" data-role="button">3 VL C</a>
+            <a href="#" data-role="button">3 VL BC</a>
+            <a href="#" data-role="button">3 VL E</a>
+            <a href="#" data-role="button">3 VL E</a>
+        </div>
+        <div id='dimensions'>
+            <div data-role="fieldcontain">
+                <label for="text-basic">Dĺžka</label>
+                <input name="text-basic" id="text-basic" value="" type="text">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="text-basic">Šírka</label>
+                <input name="text-basic" id="text-basic" value="" type="text">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="text-basic">Výška</label>
+                <input name="text-basic" id="text-basic" value="" type="text">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="text-basic">Záložka</label>
+                <input name="text-basic" id="text-basic" value="" type="text">
+            </div>
+        </div>
+        <div id="pricePart">
+        	<p>Pracovný formát <span>200x200</span> m2:<span>0.154544</span></p>
+            <p>Cena nákladov<input type="number" /></p>
+            <p>Cena pracovného formátu: <span></span></p>
+            <p>Predajná cena na <input type="number" />   kusov: <span></span></p>
+        </div>
+        <div id="prirazka">
+            Prirážka:<br />
+            0-500<br />
+            501-1000<br />
+            1001-2000<br />
+            
+        </div>
+        
     </div>
 	
 </div>
