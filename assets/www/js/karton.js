@@ -26,6 +26,9 @@ function Carton(){
 	};
 	this.setfefco = setfefcof;
 	this.setvlna = setvlnaf;
+	this.setzadaneRozmery = setzadaneRozmeryF;
+	this.update_rozmery=update_rozmeryF;
+	this.resetRozmery = resetRozmeryF;
 	
 	
 	function setfefcof(fefco){
@@ -34,7 +37,7 @@ function Carton(){
 	function setvlnaf(vlna){
 		this.vlna = vlna;
 	}
-	function resetRozmery(){
+	function resetRozmeryF(){
 		this.rozmery.dlzka=0;
 		this.rozmery.sirka=0;
 		this.rozmery.vyska=0;
@@ -49,15 +52,15 @@ function Carton(){
 		this.celkova_sirka = 0;
 		this.celkova_vyska = 0;
 	}
-	function setzadaneRozmery(dlzka,sirka,vyska,zalozka){
+	function setzadaneRozmeryF(dlzka,sirka,vyska,zalozka){
 		this.zadaneRozmery.dlzka=dlzka;
 		this.zadaneRozmery.sirka=sirka;
 		this.zadaneRozmery.vyska=vyska;
 		this.zadaneRozmery.klopa=this.zadaneRozmery.sirka/2;
 		this.zadaneRozmery.zalozka=zalozka;
 	}
-	function update_rozmery(){
-		resetRozmery();
+	function update_rozmeryF(){
+		this.resetRozmery();
 		switch(this.fefco){
 			case '0110':
 				this.celkova_sirka = this.zadaneRozmery.sirka;

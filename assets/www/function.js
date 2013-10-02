@@ -31,5 +31,10 @@ function updateImageText(){
 }
 
 $(document).ready(function(e) {
-    alert(carton_format.fefco);
+	var carton = new Carton();
+	carton.setfefco(carton_format.fefco_0201);
+	carton.setvlna(carton_vlna.vlna_3_vl_B);
+	carton.setzadaneRozmery(200,200,1100,22);
+	carton.update_rozmery();
+    alert(carton.fefco);
 });
