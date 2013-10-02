@@ -7,18 +7,204 @@
 <script src="jquery-1.9.1.min.js"></script>
 <script src="jquery.mobile-1.3.2.min.js"></script>
 <script src="function.js"></script>
+<script src="js/karton.js"></script>
 <title>Dokument bez názvu</title>
 <style>
 #fefco_img{
-	height: 300px;
+    background-size: 340px auto;
+    height: 160px;
     margin: 0 auto;
-    width: 630px;
+    width: 340px;
+	font-size: 13px;
+}
+.type_0110{
+	background: url("img/0110.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 .type_0200{
 	background: url("img/0200.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
+.type_0201{
+	background: url("img/0201.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.type_0301{
+	background: url("img/0301.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.type_0409{
+	background: url("img/0409.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.type_0454{
+	background: url("img/0454.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
 #dimensions label{
 	text-align:right;
+}
+.rotate {
+     -moz-transform: rotate(-90.0deg);  /* FF3.5+ */
+       -o-transform: rotate(-90.0deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(-90.0deg);  /* Saf3.1+, Chrome */
+             filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+         -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+}
+.type_0110 .sirka {
+    left: 185px;
+    position: relative;
+    top: 120px;
+}
+.type_0110 .dlzka {
+    left: 210px;
+    position: relative;
+    top: 31px;
+}
+.type_0200 .celkova_dlzka,.type_0201 .celkova_dlzka {
+    left: 117px;
+    position: relative;
+    top: 125px;
+}
+.type_0200 .celkova_sirka, .type_0201 .celkova_sirka {
+    left: 317px;
+    position: relative;
+    top: 90px;
+}
+.type_0200 .vyska, .type_0201 .vyska {
+    position: relative;
+    top: 74px;
+    left: 215px;
+}
+.type_0200 .klopa, .type_0201 .klopa {
+    position: relative;
+    top: 0px;
+    left: -69px;
+}
+.type_0200 .sirka, .type_0201 .sirka  {
+    position: relative;
+    top: 99px;
+    left: -55px;
+}
+.type_0200 .dlzka, .type_0201 .dlzka {
+    position: relative;
+    top: 99px;
+    left: -10px;
+}
+.type_0200 .sirka2,.type_0201 .sirka2 {
+    left: 32px;
+    position: relative;
+    top: 99px;
+}
+.type_0200 .dlzka2, .type_0201 .dlzka2 {
+    left: 70px;
+    position: relative;
+    top: 99px;
+}
+.type_0301 .vyska {
+    left: 60px;
+    position: relative;
+    top: 112px;
+}
+.type_0301 .sirka {
+    left: 10px;
+    position: relative;
+    top: 71px;
+}
+.type_0301 .dlzka {
+    left: 10px;
+    position: relative;
+    top: 89px;
+}
+.type_0301 .vyska_ucho {
+    left: 5px;
+    position: relative;
+    top: 44px;
+}
+.type_0301 .vyska_veko {
+    left: 109px;
+    position: relative;
+    top: 113px;
+}
+.type_0301 .sirka_veko {
+    left: 57px;
+    position: relative;
+    top: 72px;
+}
+.type_0301 .dlzka_veko {
+    left: 62px;
+    position: relative;
+    top: 91px;
+}
+.type_0301 .vyska_ucho_veko {
+    left: 55px;
+    position: relative;
+    top: 41px;
+}
+.type_0409 .dlzka {
+    left: 160px;
+    position: relative;
+    top: 133px;
+}
+.type_0409 .sirka {
+    left: 223px;
+    position: relative;
+    top: 105px;
+}
+.type_0409 .vyska {
+    left: 198px;
+    position: relative;
+    top: 132px;
+}
+.type_0409 .vyska2 {
+    left: 142px;
+    position: relative;
+    top: 148px;
+}
+.type_0409 .sirka_veko {
+    left: 122px;
+    position: relative;
+    top: 44px;
+}
+.type_0409 .vyska_veko {
+    left: 147px;
+    position: relative;
+    top: 73px;
+}
+
+.type_0409 .vyska_veko2 {
+    left: 97px;
+    position: relative;
+    top: 14px;
+}
+.type_0454 .dlzka {
+    left: 158px;
+    position: relative;
+    top: 104px;
+}
+.type_0454 .sirka {
+    left: 95px;
+    position: relative;
+    top: 73px;
+}
+.type_0454 .vyska {
+    left: 70px;
+    position: relative;
+    top: 128px;
+}
+.type_0454 .dlzka_veko {
+    left: -83px;
+    position: relative;
+    top: 73px;
+}
+.type_0454 .vyska_veko {
+    left: -18px;
+    position: relative;
+    top: 73px;
+}
+.type_0454 .dlzka_veko2 {
+    left: 87px;
+    position: relative;
+    top: 73px;
+}
+.type_0454 .vyska_veko2 {
+    left: 72px;
+    position: relative;
+    top: 73px;
 }
 </style>
 </head>
@@ -32,13 +218,63 @@
     </div>
 	<div data-role="content">
     	<p></p>
-        <div id='fefco_img' class='type_0200'></div>
+        <div id='fefco_img' class='type_0110'>
+        	<span class="sirka">100</span>
+            <span class="dlzka">200</span>
+        </div>
+        <div id='fefco_img' class='type_0200'>
+        	<span class="celkova_sirka">100</span>
+            <span class="celkova_dlzka">200</span>
+            <span class="vyska">200</span>
+            <span class="klopa">200</span> 
+            <span class="sirka">200</span>
+            <span class="dlzka">200</span>  
+            <span class="sirka2">200</span>
+            <span class="dlzka2">200</span>      
+        </div>
+        <div id='fefco_img' class='type_0201'>
+	        <span class="celkova_sirka">100</span>
+            <span class="celkova_dlzka">200</span>
+            <span class="vyska">200</span>
+            <span class="klopa">200</span> 
+            <span class="sirka">200</span>
+            <span class="dlzka">200</span>
+            <span class="sirka2">200</span>
+            <span class="dlzka2">200</span> 
+        </div>
+        <div id='fefco_img' class='type_0301'>
+            <span class="vyska">200</span>
+            <span class="vyska_ucho">200</span> 
+            <span class="sirka">200</span>
+            <span class="dlzka">200</span>
+            <span class="vyska_veko">200</span>
+            <span class="vyska_ucho_veko">200</span> 
+            <span class="sirka_veko">200</span>
+            <span class="dlzka_veko">200</span>        
+        </div>
+        <div id='fefco_img' class='type_0409'>
+	        <span class="dlzka">200</span>
+            <span class="sirka">200</span> 
+            <span class="vyska">200</span>
+            <span class="vyska2">200</span>
+            <span class="vyska_veko">200</span>
+            <span class="sirka_veko">200</span>
+            <span class="vyska_veko2">200</span>        
+        </div>
+        <div id='fefco_img' class='type_0454'>
+        	<span class="dlzka">200</span>
+            <span class="sirka">200</span> 
+            <span class="vyska">200</span>
+            <span class="vyska_veko">200</span>
+            <span class="dlzka_veko">200</span>
+            <span class="vyska_veko2">200</span>  
+            <span class="dlzka_veko2">200</span>          
+        </div>
         <div data-role="controlgroup" data-type="horizontal">
-            <a href="#" data-role="button">3 VL B</a>
-            <a href="#" data-role="button">3 VL C</a>
-            <a href="#" data-role="button">3 VL BC</a>
-            <a href="#" data-role="button">3 VL E</a>
-            <a href="#" data-role="button">3 VL E</a>
+            <a href="#" data-role="button" onclick="selectVlna(carton_vlna.vlna_3_vl_B);">3 VL B</a>
+            <a href="#" data-role="button" onclick="selectVlna(carton_vlna.vlna_3_vl_C);">3 VL C</a>
+            <a href="#" data-role="button" onclick="selectVlna(carton_vlna.vlna_3_vl_BC);">3 VL BC</a>
+            <a href="#" data-role="button" onclick="selectVlna(carton_vlna.vlna_3_vl_E);">3 VL E</a>
         </div>
         <div id='dimensions'>
             <div data-role="fieldcontain">
