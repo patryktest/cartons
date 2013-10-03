@@ -210,6 +210,21 @@
     position: relative;
     top: 73px;
 }
+.fefcoName {
+    font-size: 14px;
+    height: 22px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+}
+.selected {
+    background: none repeat scroll 0 0 #000000;
+    border-radius: 0 10px 0 0;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
 </style>
 </head>
 
@@ -221,14 +236,22 @@
         <button>fefco</button>
     </div>
 	<div data-role="content">
-    	<p></p>
-        <div id='fefco_img' class='type_0110 hide'>
-        	<span class="sirka">100</span>
-            <span class="dlzka">200</span>
-        </div>
+    	<p class="fefcoName">
+        	<span class="type_0110">fefco 0110</span>
+            <span class="type_0200">fefco 0200</span>
+            <span class="type_0201">fefco 0201</span>
+            <span class="type_0301">fefco 0301</span>
+            <span class="type_0409">fefco 0409</span>
+            <span class="type_0454">fefco 0454</span>
+        </p>
+      
         <div id="fefcoImagePlace">
+            <div id='fefco_img' class='type_0110 hide'>
+                <span class="sirka">100</span>
+                <span class="dlzka">200</span>
+            </div>
             <div id='fefco_img' class='type_0200 hide'>
-                    <span class="celkova_sirka">100</span>
+                <span class="celkova_sirka">100</span>
                 <span class="celkova_dlzka">200</span>
                 <span class="vyska">200</span>
                 <span class="klopa">200</span> 

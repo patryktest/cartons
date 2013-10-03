@@ -36,6 +36,14 @@ function selectVlna(vlna){
 function setFefco(format){
     carton.setfefco(format);
     
+	$('.fefcoName .type_0110').removeClass('selected');
+	$('.fefcoName .type_0200').removeClass('selected');
+	$('.fefcoName .type_0201').removeClass('selected');
+	$('.fefcoName .type_0301').removeClass('selected');
+	$('.fefcoName .type_0409').removeClass('selected');
+	$('.fefcoName .type_0454').removeClass('selected');
+	$('.fefcoName .type_'+format).addClass('selected');
+	
     $('#fefco_img.type_0110').removeClass('hide').addClass('hide');
     $('#fefco_img.type_0200').removeClass('hide').addClass('hide');
     $('#fefco_img.type_0201').removeClass('hide').addClass('hide');
@@ -62,14 +70,27 @@ $(document).ready(function(e) {
     setFefco(carton_format_array[actual_carton_format]);
     carton.setzadaneRozmery(200,200,1100,22);
     carton.update_rozmery();
-    console.log($('#fefcoImagePlace'));
+    console.log($('#fefcoImagePlace'))
     
     //$('#fefcoImagePlace').bind('swiperight',function(event){alert('posun');});
 	$("#fefcoImagePlace").swipe({
-		  swipe:function(event, direction, distance, duration, fingerCount) {
-			alert("You swiped " + direction );
-		  }
-		});
-	
+	  	swipe:function(event, direction, distance, duration, fingerCount) {
+		if(direction=='left'){
+			actual_carton_format++;
+			if(actual_carton_format>=carton_format_array.length)
+				actual_carton_format=carton_format_array.length-1
+			setFefco(carton_format_array[actual_carton_format]);
+			carton.update_rozmery();
+		}
+		if(direction=='right'){
+			actual_carton_format--;
+			if(actual_carton_format<0)
+				actual_carton_format =0;
+			setFefco(carton_format_array[actual_carton_format]);
+			carton.update_rozmery();
+		}
+		//alert("You swiped " + direction );
+	  }
+	});
     
 });
