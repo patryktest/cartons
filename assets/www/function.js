@@ -2,6 +2,9 @@ var dlzka = 0;
 var vyska = 0;
 var sirka = 0;
 var zalozka = 0;
+
+
+
 var carton_format={
 	fefco_0110:'0110',
 	fefco_0200:'0200',
@@ -23,18 +26,39 @@ var carton_prirazka={
 }
 
 function selectVlna(vlna){
-	
+    carton.setvlna(vlna);
+}
+function setFefco(format){
+    carton.setfefco(format);
+    
+    $('#fefco_img.type_0110').removeClass('hide').addClass('hide');
+    $('#fefco_img.type_0200').removeClass('hide').addClass('hide');
+    $('#fefco_img.type_0201').removeClass('hide').addClass('hide');
+    $('#fefco_img.type_0301').removeClass('hide').addClass('hide');
+    $('#fefco_img.type_0409').removeClass('hide').addClass('hide');
+    $('#fefco_img.type_0454').removeClass('hide').addClass('hide');
+    switch(format){
+        case '0110':$('#fefco_img.type_0110').removeClass('hide');break;
+        case '0200':$('#fefco_img.type_0200').removeClass('hide');break;
+        case '0201':$('#fefco_img.type_0201').removeClass('hide');break;
+        case '0301':$('#fefco_img.type_0301').removeClass('hide');break;
+        case '0409':$('#fefco_img.type_0409').removeClass('hide');break;
+        case '0454':$('#fefco_img.type_0454').removeClass('hide');break;
+    }
+    
 }
 function updateText(){
 }
-function updateImageText(){
-}
+
 
 $(document).ready(function(e) {
-	var carton = new Carton();
-	carton.setfefco(carton_format.fefco_0201);
-	carton.setvlna(carton_vlna.vlna_3_vl_B);
-	carton.setzadaneRozmery(200,200,1100,22);
-	carton.update_rozmery();
-    alert(carton.fefco);
+    carton = new Carton();
+    selectVlna(carton_vlna.vlna_3_vl_B);
+    setFefco(carton_format.fefco_0409);
+    carton.setzadaneRozmery(200,200,1100,22);
+    carton.update_rozmery();
+    console.log($('#fefcoImagePlace'))
+    
+    $('#fefcoImagePlace').bind('swiperight',function(event){alert('posun');});
+    
 });

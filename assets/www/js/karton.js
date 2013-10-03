@@ -58,35 +58,40 @@ function Carton(){
 		this.zadaneRozmery.vyska=vyska;
 		this.zadaneRozmery.klopa=this.zadaneRozmery.sirka/2;
 		this.zadaneRozmery.zalozka=zalozka;
+                console.log(this.zadaneRozmery.dlzka);
 	}
 	function update_rozmeryF(){
 		this.resetRozmery();
+                
 		switch(this.fefco){
 			case '0110':
 				this.celkova_sirka = this.zadaneRozmery.sirka;
 				this.celkova_dlzka = this.zadaneRozmery.dlzka;
+                                $('.type_0110 .sirka').text(this.celkova_sirka);
+                                $('.type_0110 .dlzka').text(this.celkova_dlzka);
+                                                
 				break;
 			case '0200':
 						switch(this.vlna){
-							case 'b':				
+							case '3_vl_B':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+4;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+4;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+6;
 									this.rozmery.klopa = this.zadaneRozmery.klopa+2;
 									break;
-							case 'c':				
+							case '3_vl_C':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+4;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+4;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+7;
 									this.rozmery.klopa = this.zadaneRozmery.klopa+3;
 									break;
-							case 'bc':				
+							case '3_vl_BC':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+10;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+10;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+10;
 									this.rozmery.klopa = this.zadaneRozmery.klopa+6;
 									break;
-							case 'e':				
+							case '3_vl_E':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+2;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+2;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+5;
@@ -95,29 +100,37 @@ function Carton(){
 						};
 						this.celkova_dlzka = (2* this.rozmery.sirka)+(2* this.rozmery.dlzka)+ this.rozmery.zalozka;
 						this.celkova_sirka = this.rozmery.vyska + this.rozmery.klopa;
+                                                $('.type_0200 .celkova_sirka').text(this.celkova_sirka);
+                                                $('.type_0200 .celkova_dlzka').text(this.celkova_dlzka);
+                                                $('.type_0200 .vyska').text(this.rozmery.vyska);
+                                                $('.type_0200 .klopa').text(this.rozmery.klopa);
+                                                $('.type_0200 .sirka').text(this.rozmery.sirka);
+                                                $('.type_0200 .sirka2').text(this.rozmery.sirka);
+                                                $('.type_0200 .dlzka').text(this.rozmery.dlzka);
+                                                $('.type_0200 .dlzka2').text(this.rozmery.dlzka);
 						break;
 			
 			case '0201':
 						switch(this.vlna){
-							case 'b':				
+							case '3_vl_B':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+4;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+4;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+6;
 									this.rozmery.klopa = this.zadaneRozmery.klopa+2;
 									break;
-							case 'c':				
+							case '3_vl_C':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+4;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+4;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+7;
 									this.rozmery.klopa = this.zadaneRozmery.klopa+3;
 									break;
-							case 'bc':				
+							case '3_vl_BC':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+10;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+10;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+10;
 									this.rozmery.klopa = this.zadaneRozmery.klopa+6;
 									break;
-							case 'e':				
+							case '3_vl_E':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+2;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+2;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+5;
@@ -126,10 +139,21 @@ function Carton(){
 						};
 						this.celkova_dlzka = (2* this.rozmery.sirka)+(2* this.rozmery.dlzka)+ this.rozmery.zalozka;
 						this.celkova_sirka = this.rozmery.vyska + this.rozmery.klopa*2;
+                                                
+                                                $('.type_0201 .celkova_sirka').text(this.celkova_sirka);
+                                                $('.type_0201 .celkova_dlzka').text(this.celkova_dlzka);
+                                                $('.type_0201 .vyska').text(this.rozmery.vyska);
+                                                $('.type_0201 .klopa').text(this.rozmery.klopa);
+                                                $('.type_0201 .sirka').text(this.rozmery.sirka);
+                                                $('.type_0201 .sirka2').text(this.rozmery.sirka);
+                                                $('.type_0201 .dlzka').text(this.rozmery.dlzka);
+                                                $('.type_0201 .dlzka2').text(this.rozmery.dlzka);
+                                                
+                                                
 						break;
 			case '0301':
 						switch(this.vlna){
-							case 'b':				
+							case '3_vl_B':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+3;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+3;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+3;
@@ -139,7 +163,7 @@ function Carton(){
 									this.rozmery.vyska_ucho = this.zadaneRozmery.vyska +2;
 									this.rozmery.vyska_ucho_veko = this.zadaneRozmery.vyska +4;
 									break;
-							case 'c':				
+							case '3_vl_C':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+4;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+4;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+4;
@@ -149,7 +173,7 @@ function Carton(){
 									this.rozmery.vyska_ucho = this.zadaneRozmery.vyska +3;
 									this.rozmery.vyska_ucho_veko = this.zadaneRozmery.vyska +5;
 									break;						
-							case 'e':				
+							case '3_vl_E':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+2;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+2;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+2;
@@ -162,24 +186,32 @@ function Carton(){
 						};
 						this.celkova_dlzka = this.rozmery.dlzka_veko +(this.rozmery.vyska_ucho_veko * 2);
 						this.celkova_sirka = (this.rozmery.vyska_veko*2)+this.rozmery.sirka_veko + (this.rozmery.vyska*2)+ this.rozmery.sirka;
+                                                $('.type_0301 .vyska').text(this.rozmery.vyska);              
+                                                $('.type_0301 .vyska_ucho').text(this.rozmery.vyska_ucho); 
+                                                $('.type_0301 .sirka').text(this.rozmery.sirka);                                           
+                                                $('.type_0301 .dlzka').text(this.rozmery.dlzka);                                         
+                                                $('.type_0301 .vyska_veko').text(this.rozmery.vyska_veko);
+                                                $('.type_0301 .vyska_ucho_veko').text(this.rozmery.vyska_ucho_veko);
+                                                $('.type_0301 .sirka_veko').text(this.rozmery.sirka_veko);
+                                                $('.type_0301 .dlzka_veko').text(this.rozmery.dlzka_veko);
 						break;
 			case '0409':
 						switch(this.vlna){
-							case 'b':				
+							case '3_vl_B':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+3;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+3;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+2;
 									this.rozmery.sirka_veko = this.zadaneRozmery.sirka +6;
 									this.rozmery.vyska_veko = this.zadaneRozmery.vyska +4;
 									break;
-							case 'c':				
+							case '3_vl_C':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+4;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+4;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+3;
 									this.rozmery.sirka_veko = this.zadaneRozmery.sirka +7;
 									this.rozmery.vyska_veko = this.zadaneRozmery.vyska +5;
 									break;
-							case 'e':				
+							case '3_vl_E':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+2;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+2;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+1;
@@ -189,24 +221,31 @@ function Carton(){
 						};
 						this.celkova_dlzka = this.rozmery.dlzka + (this.rozmery.vyska*2);
 						this.celkova_sirka = this.rozmery.vyska + this.rozmery.sirka + (this.rozmery.vyska_veko*2) + this.rozmery.sirka_veko;
+                                                $('.type_0409 .vyska').text(this.rozmery.vyska);              
+                                                $('.type_0409 .vyska2').text(this.rozmery.vyska); 
+                                                $('.type_0409 .sirka').text(this.rozmery.sirka);                                           
+                                                $('.type_0409 .dlzka').text(this.rozmery.dlzka);                                         
+                                                $('.type_0409 .vyska_veko').text(this.rozmery.vyska_veko);   
+                                                $('.type_0409 .sirka_veko').text(this.rozmery.sirka_veko);
+                                                $('.type_0409 .vyska_veko2').text(this.rozmery.vyska_veko);
 						break;
 			case '0454':
 						switch(this.vlna){
-							case 'b':				
+							case '3_vl_B':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+10;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+3;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+3;
 									this.rozmery.dlzka_veko = this.zadaneRozmery.vyska +15;
 									this.rozmery.vyska_veko = this.zadaneRozmery.vyska +6;
 									break;
-							case 'c':				
+							case '3_vl_C':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+11;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+4;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+4;
 									this.rozmery.dlzka_veko = this.zadaneRozmery.vyska +16;
 									this.rozmery.vyska_veko = this.zadaneRozmery.vyska +7;
 									break;
-							case 'e':				
+							case '3_vl_E':				
 									this.rozmery.dlzka = this.zadaneRozmery.dlzka+9;
 									this.rozmery.sirka = this.zadaneRozmery.sirka+2;
 									this.rozmery.vyska = this.zadaneRozmery.vyska+2;
@@ -216,6 +255,14 @@ function Carton(){
 						};
 						this.celkova_dlzka = this.rozmery.dlzka + (this.rozmery.vyska_veko*2)+ (this.rozmery.dlzka_veko*2);
 						this.celkova_sirka = this.rozmery.vyska + this.rozmery.sirka;
+                                                
+                                                $('.type_0454 .vyska').text(this.rozmery.vyska);              
+                                                $('.type_0454 .sirka').text(this.rozmery.sirka);                                           
+                                                $('.type_0454 .dlzka').text(this.rozmery.dlzka);                                         
+                                                $('.type_0454 .vyska_veko').text(this.rozmery.vyska_veko);   
+                                                $('.type_0454 .dlzka_veko').text(this.rozmery.dlzka_veko);
+                                                $('.type_0454 .dlzka_veko2').text(this.rozmery.dlzka_veko);
+                                                $('.type_0454 .vyska_veko2').text(this.rozmery.vyska_veko);
 						break;
 			
 		}

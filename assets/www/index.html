@@ -8,6 +8,7 @@
 <script src="jquery.mobile-1.3.2.min.js"></script>
 <script src="function.js"></script>
 <script src="js/karton.js"></script>
+<script src="js/jgestures.min.js"></script>
 <title>Dokument bez názvu</title>
 <style>
 #fefco_img{
@@ -154,23 +155,22 @@
     top: 132px;
 }
 .type_0409 .vyska2 {
-    left: 142px;
+    left: 136px;
     position: relative;
     top: 148px;
 }
 .type_0409 .sirka_veko {
-    left: 122px;
+    left: 105px;
     position: relative;
     top: 44px;
 }
 .type_0409 .vyska_veko {
-    left: 147px;
+    left: 133px;
     position: relative;
     top: 73px;
 }
-
 .type_0409 .vyska_veko2 {
-    left: 97px;
+    left: 79px;
     position: relative;
     top: 14px;
 }
@@ -225,53 +225,55 @@
         	<span class="sirka">100</span>
             <span class="dlzka">200</span>
         </div>
-        <div id='fefco_img' class='type_0200 hide'>
-        	<span class="celkova_sirka">100</span>
-            <span class="celkova_dlzka">200</span>
-            <span class="vyska">200</span>
-            <span class="klopa">200</span> 
-            <span class="sirka">200</span>
-            <span class="dlzka">200</span>  
-            <span class="sirka2">200</span>
-            <span class="dlzka2">200</span>      
-        </div>
-        <div id='fefco_img' class='type_0201'>
-	        <span class="celkova_sirka">100</span>
-            <span class="celkova_dlzka">200</span>
-            <span class="vyska">200</span>
-            <span class="klopa">200</span> 
-            <span class="sirka">200</span>
-            <span class="dlzka">200</span>
-            <span class="sirka2">200</span>
-            <span class="dlzka2">200</span> 
-        </div>
-        <div id='fefco_img' class='type_0301 hide'>
-            <span class="vyska">200</span>
-            <span class="vyska_ucho">200</span> 
-            <span class="sirka">200</span>
-            <span class="dlzka">200</span>
-            <span class="vyska_veko">200</span>
-            <span class="vyska_ucho_veko">200</span> 
-            <span class="sirka_veko">200</span>
-            <span class="dlzka_veko">200</span>        
-        </div>
-        <div id='fefco_img' class='type_0409 hide'>
-	        <span class="dlzka">200</span>
-            <span class="sirka">200</span> 
-            <span class="vyska">200</span>
-            <span class="vyska2">200</span>
-            <span class="vyska_veko">200</span>
-            <span class="sirka_veko">200</span>
-            <span class="vyska_veko2">200</span>        
-        </div>
-        <div id='fefco_img' class='type_0454 hide'>
-        	<span class="dlzka">200</span>
-            <span class="sirka">200</span> 
-            <span class="vyska">200</span>
-            <span class="vyska_veko">200</span>
-            <span class="dlzka_veko">200</span>
-            <span class="vyska_veko2">200</span>  
-            <span class="dlzka_veko2">200</span>          
+        <div id="fefcoImagePlace">
+            <div id='fefco_img' class='type_0200 hide'>
+                    <span class="celkova_sirka">100</span>
+                <span class="celkova_dlzka">200</span>
+                <span class="vyska">200</span>
+                <span class="klopa">200</span> 
+                <span class="sirka">200</span>
+                <span class="dlzka">200</span>  
+                <span class="sirka2">200</span>
+                <span class="dlzka2">200</span>      
+            </div>
+            <div id='fefco_img' class='type_0201'>
+                    <span class="celkova_sirka">100</span>
+                <span class="celkova_dlzka">200</span>
+                <span class="vyska">200</span>
+                <span class="klopa">200</span> 
+                <span class="sirka">200</span>
+                <span class="dlzka">200</span>
+                <span class="sirka2">200</span>
+                <span class="dlzka2">200</span> 
+            </div>
+            <div id='fefco_img' class='type_0301 hide'>
+                <span class="vyska">200</span>
+                <span class="vyska_ucho">200</span> 
+                <span class="sirka">200</span>
+                <span class="dlzka">200</span>
+                <span class="vyska_veko">200</span>
+                <span class="vyska_ucho_veko">200</span> 
+                <span class="sirka_veko">200</span>
+                <span class="dlzka_veko">200</span>        
+            </div>
+            <div id='fefco_img' class='type_0409 hide'>
+                    <span class="dlzka">200</span>
+                <span class="sirka">200</span> 
+                <span class="vyska">200</span>
+                <span class="vyska2">200</span>
+                <span class="vyska_veko">200</span>
+                <span class="sirka_veko">200</span>
+                <span class="vyska_veko2">200</span>        
+            </div>
+            <div id='fefco_img' class='type_0454 hide'>
+                    <span class="dlzka">200</span>
+                <span class="sirka">200</span> 
+                <span class="vyska">200</span>
+                <span class="vyska_veko">200</span>
+                <span class="dlzka_veko">200</span>
+                <span class="vyska_veko2">200</span>  
+                <span class="dlzka_veko2">200</span>          
+            </div>
         </div>
         <div data-role="controlgroup" data-type="horizontal">
             <a href="#" data-role="button" onclick="selectVlna(carton_vlna.vlna_3_vl_B);">3 VL B</a>
