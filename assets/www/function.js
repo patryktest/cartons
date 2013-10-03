@@ -2,6 +2,7 @@ var dlzka = 0;
 var vyska = 0;
 var sirka = 0;
 var zalozka = 0;
+var actual_carton_format = 0;
 
 
 
@@ -12,6 +13,10 @@ var carton_format={
 	fefco_0301:'0301',
 	fefco_0409:'0409',
 	fefco_0454:'0454'
+}
+var carton_format_array=[];
+for(var index in carton_format){
+	carton_format_array.push(carton_format[index]);
 }
 var carton_vlna={
 	vlna_3_vl_B:'3_vl_B',
@@ -54,11 +59,17 @@ function updateText(){
 $(document).ready(function(e) {
     carton = new Carton();
     selectVlna(carton_vlna.vlna_3_vl_B);
-    setFefco(carton_format.fefco_0409);
+    setFefco(carton_format_array[actual_carton_format]);
     carton.setzadaneRozmery(200,200,1100,22);
     carton.update_rozmery();
-    console.log($('#fefcoImagePlace'))
+    console.log($('#fefcoImagePlace'));
     
-    $('#fefcoImagePlace').bind('swiperight',function(event){alert('posun');});
+    //$('#fefcoImagePlace').bind('swiperight',function(event){alert('posun');});
+	$("#fefcoImagePlace").swipe({
+		  swipe:function(event, direction, distance, duration, fingerCount) {
+			alert("You swiped " + direction );
+		  }
+		});
+	
     
 });
